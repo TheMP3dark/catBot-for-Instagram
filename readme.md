@@ -1,7 +1,7 @@
-_pls read dis i spent a lot of time typing it all and even had to watch a video to understand github :(_
+pls read dis i spent a lot of time typing it all and even had to watch a video to understand github :(_
 # catBot for Instagram
 
-The aim of this python program is to fetch random cat images using the [catAPI](https://thecatapi.com/) and post them to Instagram using the [instabot library](https://pypi.org/project/instabot/). The program requires you to have an Instagram account beforehand. You will also require an API key for catAPI that you can simply recieve in an email after signing up for free [here](https://thecatapi.com/).
+The aim of this python program is to fetch random cat images using the [catAPI](https://thecatapi.com/) and post them to Instagram using the [instabot library](https://pypi.org/project/instabot/). The program requires you to have an Instagram account beforehand. You will also require an API key for catAPI that you can simply receive in an email after signing up for free [here](https://thecatapi.com/).
 
 # Prerequisites
 You will need python to be installed on your machine in order to run the python program. You will also need to install some libraries used by the program manually using pip. 
@@ -17,7 +17,7 @@ Before you can run the program, you will need to edit loginDetails.py
       self.apiKey = "API_KEY"
 Replace USER_NAME with your Instagram username (not email id) and PASSWORD with your password. You will also need to replace API_KEY with the api ey you recieve from catAPI as an email.
 
-When you are done with the previous steps, you can run main.py in pyton using the follwing command:
+When you are done with the previous steps, you can run main.py in python using the following command:
 `python main.py`
 Check your Instagram account from a web browser to check if the image has been posted.
     
@@ -76,7 +76,7 @@ To keep track of test posts and maintain unique captions for each post, this fil
 Some features I am planning to add when I get the time.
 
 ## Automatically add custom #hashtags to make the post more popular
-Scrape Instagram for the popular (in this case, cats related) hashtags to give our posts more visibilty.
+Scrape Instagram for the popular (in this case, cats related) hashtags to give our posts more visibility.
 
 ## Record the number of likes on posts
 
