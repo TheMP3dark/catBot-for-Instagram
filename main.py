@@ -1,5 +1,6 @@
 import json
 import os
+import scrapeHashTag
 from urllib.request import Request, urlopen
 from instabot import Bot
 from loginDetails import instaLoginDetails
@@ -39,7 +40,11 @@ cropCatImg()
 # create bot, login and upload image
 botToPost = Bot()
 botToPost.login(username=initLogin.userName, password=initLogin.passWord)
-newTestCaption = "test#000"+str(lastNum)
+
+# check for top hashtags
+hashTagList = scrapeHashTag.fetchPopularHashTags()
+
+newTestCaption = "test#000"+str(lastNum)+"\n"+"#"+str(hashTagList[0])+" #"+str(hashTagList[1])+" #"+str(hashTagList[2])
 botToPost.upload_photo("final.jpg", caption=newTestCaption)
 
 # delete the images so no conflicts arise the next time we run the program

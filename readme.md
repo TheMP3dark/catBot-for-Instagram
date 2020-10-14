@@ -1,12 +1,25 @@
 pls read dis i spent a lot of time typing it all and even had to watch a video to understand github :(_
+#####UPDATE: Added capability to fetch and add popular hashtags to the title automatically! 
 # catBot for Instagram
 
 The aim of this python program is to fetch random cat images using the [catAPI](https://thecatapi.com/) and post them to Instagram using the [instabot library](https://pypi.org/project/instabot/). The program requires you to have an Instagram account beforehand. You will also require an API key for catAPI that you can simply receive in an email after signing up for free [here](https://thecatapi.com/).
 
 # Prerequisites
 You will need python to be installed on your machine in order to run the python program. You will also need to install some libraries used by the program manually using pip. 
-Run the following command to install the library:
+Run the following command to install the libraries:
+<br>
+<br>
+_**Instabot:**_
+<br>
 `pip install instabot`
+<br>
+_**Requests:**_
+<br>
+`pip install requests`
+<br>
+_**BeautifulSoup4:**_
+<br>
+`pip install bs4`
 
 **!!! IMPORTANT !!!**
 Before you can run the program, you will need to edit loginDetails.py
@@ -70,13 +83,15 @@ cropImg.<span></span>py is used to crop the images fetched from the catAPI to a 
 
 To keep track of test posts and maintain unique captions for each post, this file is used. It keeps count of the number of times the file is executed. It should contain "0" when you first open the file. It will be incremented by 1 and updated in the text file every time you run the program.
 
+## scrapeHashTag.<span></span>py
 
+This program fetches top hashtags from https://top-hashtags.com/instagram/ and appends it into a list, which is further used to add the custom hashtags to the post caption. We make use of requests library to fetch the page and BeautifulSoup (bs4) for parsing the fetched webpage.
 # Future Goals
 
 Some features I am planning to add when I get the time.
 
-## Automatically add custom #hashtags to make the post more popular
-Scrape Instagram for the popular (in this case, cats related) hashtags to give our posts more visibility.
+~~Automatically add custom #hashtags to make the post more popular
+Scrape Instagram for the popular (in this case, cats related) hashtags to give our posts more visibility.~~
 
 ## Record the number of likes on posts
 

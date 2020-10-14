@@ -3,6 +3,6 @@ class instaLoginDetails:
     passWord = ""
     apiKey = ""
     def __init__(self):  
-      self.userName = "USER_NAME"  
-      self.passWord = "PASSWORD"  
+      self.userName = "catapitest"
+      self.passWord = "catchMeIfYouCan!"
       self.apiKey = "API_KEY"
