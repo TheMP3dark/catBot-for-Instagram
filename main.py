@@ -44,7 +44,7 @@ botToPost.login(username=initLogin.userName, password=initLogin.passWord)
 # check for top hashtags
 hashTagList = scrapeHashTag.fetchPopularHashTags()
 
-newTestCaption = "test#000"+str(lastNum)+"\n"+"#"+str(hashTagList[0])+" #"+str(hashTagList[1])+" #"+str(hashTagList[2])
+newTestCaption = "test#000"+str(lastNum)+"\n"+str(hashTagList[0])+" "+str(hashTagList[1])+" "+str(hashTagList[2])
 botToPost.upload_photo("final.jpg", caption=newTestCaption)
 
 # delete the images so no conflicts arise the next time we run the program

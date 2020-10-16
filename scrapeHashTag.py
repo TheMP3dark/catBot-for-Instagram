@@ -4,18 +4,14 @@ import requests
 from bs4 import BeautifulSoup
 
 def fetchPopularHashTags():
+    popularHashTags = []
     fetchUrl = "https://top-hashtags.com/instagram/"
     scrapedPageData = requests.get(fetchUrl)
     dataSoup = BeautifulSoup(scrapedPageData.content, "html.parser")
     grabDiv = dataSoup.find("div", class_="entry-content clear")
-    grabDivTag = str(grabDiv.find_all("div", class_="i-tag"))
-    hashListParent = grabDivTag.split("#")
-    hashList = hashListParent[1::1]
-
-    popularHashTags = []
-    for items in hashList:
-        hashes = items.split("</a>")
-        popularHashTags.append(hashes[0])
+    grabDivTag = grabDiv.find_all("div", class_="i-tag")
+    for popularHashTag in grabDivTag:
+        popularHashTags.append(popularHashTag.a.text)
 
     return popularHashTags
 
