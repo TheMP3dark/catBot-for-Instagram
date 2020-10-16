@@ -32,9 +32,13 @@ Before you can run the program, you will need to edit loginDetails.py
 Replace USER_NAME with your Instagram username (not email id) and PASSWORD with your password. You will also need to replace API_KEY with the api ey you recieve from catAPI as an email.
 
 When you are done with the previous steps, you can run main.py in python using the following command:
+<<<<<<< HEAD
 <br>
 `python main.py`
 <br>
+=======
+`pyt hon main.py`
+>>>>>>> f36d78df1a0b2974240519f899b099e84fffedec
 Check your Instagram account from a web browser to check if the image has been posted.
     
 
